@@ -1,0 +1,150 @@
+/* Importation des polices */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* Empêche le défilement de la page */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+    overflow: auto; /* Permet le défilement uniquement si nécessaire */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed; /* Assure une largeur fixe pour chaque colonne */
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap; /* Empêche le texte de s'étendre sur plusieurs lignes */
+}
+
+th {
+    background-color: #512da8;
+    color: white;
+}
+
+th:nth-child(1) { /* Colonne ID */
+    width: 5%;
+}
+
+th:nth-child(4) { /* Colonne Email */
+    width: 20%;
+}
+
+/* Styles pour la barre latérale et la navigation */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #E5CFF7;
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+nav {
+    background-color: #E5CFF7;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+nav a:hover {
+    background-color: #512da8;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+
+
+.success-message {
+  background-color: #512da8;
+  color: #E5CFF7;
+  border: 1px solid #c3e6cb;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 5px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
